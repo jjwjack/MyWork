@@ -3,6 +3,7 @@ E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\bin\Debug\VideoToAu
 E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\obj\x86\Debug\MainWindow.baml
 E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\obj\x86\Debug\MainWindow.g.cs
 E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\obj\x86\Debug\App.g.cs
+E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\obj\x86\Debug\VideoToAudio_Content.g.cs
 E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\obj\x86\Debug\VideoToAudio_MarkupCompile.cache
 E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\obj\x86\Debug\VideoToAudio.g.resources
 E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\obj\x86\Debug\VideoToAudio.Properties.Resources.resources
