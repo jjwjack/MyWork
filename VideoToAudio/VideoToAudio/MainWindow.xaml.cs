@@ -23,6 +23,8 @@ namespace _10视频转换
     {
         //先定义一个字典，存储图片名字和时间
         private Dictionary<string, int> imageAndTime = new Dictionary<string, int>();
+        //定义一个泛型存放时间，用于拖动进度条时前后比较
+        List<int> imageTimes = new List<int>();
         private string imagePath = @"E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\bin\Debug\";
 
         public MainWindow()
@@ -42,7 +44,16 @@ namespace _10视频转换
             //获取目录下所有图片名字列表并计算时间，存入字典
             GetImages();
             //显示图片
-
+            //存储所有时间
+            foreach (var item in imageAndTime)
+            {
+                imageTimes.Add(item.Value);
+            }
+            //测试时间存进来没有
+            //foreach (var item in imageTimes)
+            //{
+            //    Console.WriteLine(item);
+            //}
             //string imageName = null;
             //string imagePath = @"E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\bin\Debug\" + imageName;
             image1.Source = new BitmapImage(new Uri(@"E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\bin\Debug\1.jpg", UriKind.RelativeOrAbsolute));
@@ -92,7 +103,7 @@ namespace _10视频转换
                 {
                     image1.Source = new BitmapImage(new Uri(imagePath + item.Key, UriKind.RelativeOrAbsolute));
                 }
-
+                
 
             }
 
@@ -177,11 +188,11 @@ namespace _10视频转换
             }
             //return imageAndTime;
             //输出字典测试一下
-            foreach (var item in imageAndTime)
-            {
-                Console.WriteLine(item.Key);
-                Console.WriteLine(item.Value);
-            }
+            //foreach (var item in imageAndTime)
+            //{
+            //    Console.WriteLine(item.Key);
+            //    Console.WriteLine(item.Value);
+            //}
 
         }
 
@@ -196,17 +207,26 @@ namespace _10视频转换
         {
             myMusic.Position = TimeSpan.FromSeconds(slider1.Value);
             //拖动进度条的时候，判断该显示哪张图片，两个时间之间{"001580.jpg":15,"001974.jpg":19}
-            //int[] 
+            
+            
             foreach (var item in imageAndTime)
             {
                 if (item.Value == Math.Floor(slider1.Value))
                 {
                     image1.Source = new BitmapImage(new Uri(imagePath + item.Key, UriKind.RelativeOrAbsolute));
                 }
-                //else if ()
-                //{
-                    
-                //}
+                //此处有问题，提示索引不能为负或超出索引。slider_valuechange事件，是不是自己动也算？不仅仅是拖动？
+                else
+                {
+                    for (int i = 0; i < imageTimes.Count; i++)
+                    {
+                        if (Math.Floor(slider1.Value) < imageTimes[i])
+                        {
+                            MessageBox.Show(imageTimes[i - 1].ToString());
+                        }
+                    }
+                }
+                
             }
             //slider1.Value = myMusic.Position.TotalSeconds;
             //myMusic.Position = slider1.Value;
