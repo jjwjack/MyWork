@@ -4,7 +4,7 @@
         Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
     <Grid Height="285" Name="grid1" Width="503">
         <!--<Image Height="86" HorizontalAlignment="Left" Margin="68,168,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="377" Source="bin\debug\1.jpg"/>-->
-        <Image Height="86" HorizontalAlignment="Left" Margin="40,31,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="377" />
+        <Image Height="49" HorizontalAlignment="Left" Margin="12,68,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="474" />
         <MediaElement Height="48" HorizontalAlignment="Left" Margin="40,123,0,0" Name="myMusic" VerticalAlignment="Top" Width="271" MediaOpened="myMusic_MediaOpened" UnloadedBehavior="Manual" DataContext="{Binding}" LoadedBehavior="Manual" Source="E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\bin\Debug\LoveStory.mp3" />
         <Button Content="暂停" Height="31" HorizontalAlignment="Left" Margin="40,231,0,0" Name="btnPlayOrPause" VerticalAlignment="Top" Width="49" Click="btnPlayOrPause_Click" />
         <Slider Height="25" HorizontalAlignment="Left" Margin="40,186,0,0" Name="slider1" VerticalAlignment="Top" Width="365" ValueChanged="slider1_ValueChanged" />
