@@ -60,11 +60,8 @@ namespace _10视频转换
 
             //大爷的！直接窗体加载就能自动播放！
             myMusic.Play();
-
+            //myVideo.Play();
         }
-
-
-
 
 
 
@@ -199,35 +196,36 @@ namespace _10视频转换
 
 
         /// <summary>
-        /// 拖动进度条，改变播放时间
+        /// slider_valuechanged,拖动进度条，改变播放时间，不能采用！！
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void slider1_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            myMusic.Position = TimeSpan.FromSeconds(slider1.Value);
-            //拖动进度条的时候，判断该显示哪张图片，两个时间之间{"001580.jpg":15,"001974.jpg":19}
-            
-            
-            foreach (var item in imageAndTime)
-            {
-                if (item.Value == Math.Floor(slider1.Value))
-                {
-                    image1.Source = new BitmapImage(new Uri(imagePath + item.Key, UriKind.RelativeOrAbsolute));
-                }
-                //此处有问题，提示索引不能为负或超出索引。slider_valuechange事件，是不是自己动也算？不仅仅是拖动？
-                else
-                {
-                    for (int i = 0; i < imageTimes.Count; i++)
-                    {
-                        if (Math.Floor(slider1.Value) < imageTimes[i])
-                        {
-                            MessageBox.Show(imageTimes[i - 1].ToString());
-                        }
-                    }
-                }
-                
-            }
+            ////不能用这个slider_valuechanged，声音会卡，因为播放的时候本身value值就在变化，不是只有拖动才有变化！！
+            //myMusic.Position = TimeSpan.FromSeconds(slider1.Value);
+            ////拖动进度条的时候，判断该显示哪张图片，两个时间之间{"001580.jpg":15,"001974.jpg":19}
+
+
+            //foreach (var item in imageAndTime)
+            //{
+            //    if (item.Value == Math.Floor(slider1.Value))
+            //    {
+            //        image1.Source = new BitmapImage(new Uri(imagePath + item.Key, UriKind.RelativeOrAbsolute));
+            //    }
+            //    //此处有问题，提示索引不能为负或超出索引。slider_valuechange事件，是不是自己动也算？不仅仅是拖动？
+            //    //else
+            //    //{
+            //    //    for (int i = 0; i < imageTimes.Count; i++)
+            //    //    {
+            //    //        if (Math.Floor(slider1.Value) < imageTimes[i])
+            //    //        {
+            //    //            MessageBox.Show(imageTimes[i - 1].ToString());
+            //    //        }
+            //    //    }
+            //    //}
+
+            //}
             //slider1.Value = myMusic.Position.TotalSeconds;
             //myMusic.Position = slider1.Value;
         }
@@ -269,6 +267,36 @@ namespace _10视频转换
             //貌似音量最高也就10了
             myMusic.Volume = slider2.Value;
         }
+     
+        
+        /// <summary>
+        /// 加载视频
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void myVideo_MediaOpened(object sender, RoutedEventArgs e)
+        {
+            //myVideo.Source = new Uri(@"E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\bin\Debug\LoveStory.mp4", UriKind.RelativeOrAbsolute);
+        }
+
+        private void myVideo_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            //myVideo.Visibility = System.Windows.Visibility.Hidden;
+        }
+
+
+        /// <summary>
+        /// 音乐停止
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnStop_Click(object sender, RoutedEventArgs e)
+        {
+            myMusic.Stop();
+            btnPlayOrPause.Content = "播放";
+        }
+
+        
 
 
 
