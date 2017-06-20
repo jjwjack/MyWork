@@ -1,0 +1,11 @@
+E:\AppServ\www\github\MyWork\trunk\VideoToAudio\test\bin\Debug\test.exe
+E:\AppServ\www\github\MyWork\trunk\VideoToAudio\test\bin\Debug\test.pdb
+E:\AppServ\www\github\MyWork\trunk\VideoToAudio\test\obj\x86\Debug\MainWindow.baml
+E:\AppServ\www\github\MyWork\trunk\VideoToAudio\test\obj\x86\Debug\MainWindow.g.cs
+E:\AppServ\www\github\MyWork\trunk\VideoToAudio\test\obj\x86\Debug\App.g.cs
+E:\AppServ\www\github\MyWork\trunk\VideoToAudio\test\obj\x86\Debug\test_MarkupCompile.cache
+E:\AppServ\www\github\MyWork\trunk\VideoToAudio\test\obj\x86\Debug\test.g.resources
+E:\AppServ\www\github\MyWork\trunk\VideoToAudio\test\obj\x86\Debug\test.Properties.Resources.resources
+E:\AppServ\www\github\MyWork\trunk\VideoToAudio\test\obj\x86\Debug\test.csproj.GenerateResource.Cache
+E:\AppServ\www\github\MyWork\trunk\VideoToAudio\test\obj\x86\Debug\test.exe
+E:\AppServ\www\github\MyWork\trunk\VideoToAudio\test\obj\x86\Debug\test.pdb

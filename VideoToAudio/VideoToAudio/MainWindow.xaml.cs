@@ -325,7 +325,7 @@ namespace _10视频转换
             //大爷的！直接窗体加载就能自动播放！
             //两个不能一起play，好像有个优先级，都不play的话默认是视频。
             myMusic.Play();
-            //myVideo.Play();
+            myVideo.Play();
         }
 
 
@@ -472,6 +472,7 @@ namespace _10视频转换
         private void slider1_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             myMusic.Position = TimeSpan.FromSeconds(slider1.Value);
+            //imageChange(slider1.Value);
             ////拖动进度条的时候，判断该显示哪张图片，两个时间之间{"001580.jpg":15,"001974.jpg":19}
 
 
@@ -511,8 +512,9 @@ namespace _10视频转换
             //MessageBox.Show(pX.ToString());
             //slider.width会随窗口自动改变，要用slider1.ActualWidth
             slider1.Value = pX / slider1.ActualWidth * slider1.Maximum;
-            
+
             myMusic.Position = TimeSpan.FromSeconds(slider1.Value);
+            imageChange(slider1.Value);
             //拖动进度条的时候，判断该显示哪张图片，两个时间之间{"001580.jpg":15,"001974.jpg":19}
 
             //Dictionary<string, int> imageAndTime的格式为{"001580.jpg":"15", "001974.jpg":"19"}
@@ -524,10 +526,40 @@ namespace _10视频转换
             //    image1.Source = new BitmapImage(new Uri(imagePath + item.Key, UriKind.RelativeOrAbsolute));
             //}
             //只需要判断范围
+            //for (int i = 1; i < imageTimes.Count; i++)
+            //{
+            //    //i要从1开始，不然i-1会超出索引
+            //    if ((Math.Floor(slider1.Value) < imageTimes[i]) && (Math.Floor(slider1.Value) > imageTimes[i - 1]))
+            //    {
+            //        image1.Source = new BitmapImage(new Uri(imagePath + imageAndTime[imageTimes[i - 1]], UriKind.RelativeOrAbsolute));
+
+            //        //foreach (var item in imageAndTime)
+            //        //{
+            //        //    if (item.Value == imageTimes[i - 1])
+            //        //    {
+            //        //        image1.Source = new BitmapImage(new Uri(imagePath + item.Key, UriKind.RelativeOrAbsolute));
+            //        //    }
+            //        //}
+            //    }
+            //    else if (Math.Floor(slider1.Value) < imageTimes[0])
+            //    {
+            //        image1.Source = new BitmapImage(new Uri(imagePath + imageAndTime.Values.First(), UriKind.RelativeOrAbsolute));
+            //    }
+            //}
+
+
+        }
+
+        /// <summary>
+        /// 把改变图片单独封装成函数，上面两个事件都需要调用。
+        /// </summary>
+        /// <param name="sliderValue"></param>
+        private void imageChange(double sliderValue)
+        {
             for (int i = 1; i < imageTimes.Count; i++)
             {
                 //i要从1开始，不然i-1会超出索引
-                if ((Math.Floor(slider1.Value) < imageTimes[i]) && (Math.Floor(slider1.Value) > imageTimes[i - 1]))
+                if ((Math.Floor(sliderValue) < imageTimes[i]) && (Math.Floor(sliderValue) > imageTimes[i - 1]))
                 {
                     image1.Source = new BitmapImage(new Uri(imagePath + imageAndTime[imageTimes[i - 1]], UriKind.RelativeOrAbsolute));
 
@@ -539,15 +571,24 @@ namespace _10视频转换
                     //    }
                     //}
                 }
-                else if (Math.Floor(slider1.Value) < imageTimes[0])
+                else if (Math.Floor(sliderValue) < imageTimes[0])
                 {
                     image1.Source = new BitmapImage(new Uri(imagePath + imageAndTime.Values.First(), UriKind.RelativeOrAbsolute));
                 }
             }
-
-
+            if (sliderValue>videoTotalTime)
+            {
+                //MessageBox.Show("关闭视频！");
+                myVideo.Pause();
+            }
+            else if (sliderValue<videoTotalTime)
+            {
+                //myVideo.Position = TimeSpan.FromSeconds(sliderValue);
+                MessageBox.Show("播放视频！");
+                //myVideo.Play();
+               
+            }
         }
-
 
         /// <summary>
         /// 音量条
@@ -581,7 +622,9 @@ namespace _10视频转换
         /// <param name="e"></param>
         private void myVideo_MediaEnded(object sender, RoutedEventArgs e)
         {
-            //myVideo.Visibility = System.Windows.Visibility.Hidden;
+            myVideo.Visibility = System.Windows.Visibility.Hidden;
+            //MessageBox.Show("123");
+            //myVideo.Close();
         }
 
 
@@ -596,7 +639,7 @@ namespace _10视频转换
             btnPlayOrPause.Content = "播放";
         }
 
-        
+
 
         /// <summary>
         /// 播放和暂停按钮
@@ -620,7 +663,15 @@ namespace _10视频转换
             }
 
         }
-       
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            myVideo.Pause();
+        }
+
+
+
+        
 
 
 

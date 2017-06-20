@@ -1,5 +1,4 @@
-E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\bin\Debug\VideoToAudio.exe
-E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\bin\Debug\VideoToAudio.pdb
+E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\obj\x86\Debug\VideoToAudio.csprojResolveAssemblyReference.cache
 E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\obj\x86\Debug\MainWindow.baml
 E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\obj\x86\Debug\MainWindow.g.cs
 E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\obj\x86\Debug\App.g.cs
@@ -10,6 +9,7 @@ E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\obj\x86\Debug\Video
 E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\obj\x86\Debug\VideoToAudio.csproj.GenerateResource.Cache
 E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\obj\x86\Debug\VideoToAudio.exe
 E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\obj\x86\Debug\VideoToAudio.pdb
+E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\bin\Debug\VideoToAudio.exe
+E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\bin\Debug\VideoToAudio.pdb
 E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\bin\Debug\Vlc.DotNet.Core.dll
 E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\bin\Debug\Vlc.DotNet.Core.Interops.dll
-E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\obj\x86\Debug\VideoToAudio.csprojResolveAssemblyReference.cache

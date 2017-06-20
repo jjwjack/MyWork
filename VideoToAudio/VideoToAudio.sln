@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoToAudio", "VideoToAudio\VideoToAudio.csproj", "{F1513142-4DAE-4C80-AEF6-481AAFDD75F7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{66385F2B-663C-45DA-83D8-0C053CE33980}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +15,10 @@ Global
 		{F1513142-4DAE-4C80-AEF6-481AAFDD75F7}.Debug|x86.Build.0 = Debug|x86
 		{F1513142-4DAE-4C80-AEF6-481AAFDD75F7}.Release|x86.ActiveCfg = Release|x86
 		{F1513142-4DAE-4C80-AEF6-481AAFDD75F7}.Release|x86.Build.0 = Release|x86
+		{66385F2B-663C-45DA-83D8-0C053CE33980}.Debug|x86.ActiveCfg = Debug|x86
+		{66385F2B-663C-45DA-83D8-0C053CE33980}.Debug|x86.Build.0 = Debug|x86
+		{66385F2B-663C-45DA-83D8-0C053CE33980}.Release|x86.ActiveCfg = Release|x86
+		{66385F2B-663C-45DA-83D8-0C053CE33980}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
