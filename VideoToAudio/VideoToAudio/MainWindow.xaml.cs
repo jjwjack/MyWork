@@ -472,7 +472,7 @@ namespace _10视频转换
         private void slider1_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             myMusic.Position = TimeSpan.FromSeconds(slider1.Value);
-            //imageChange(slider1.Value);
+            imageChange(slider1.Value);
             ////拖动进度条的时候，判断该显示哪张图片，两个时间之间{"001580.jpg":15,"001974.jpg":19}
 
 
@@ -576,17 +576,22 @@ namespace _10视频转换
                     image1.Source = new BitmapImage(new Uri(imagePath + imageAndTime.Values.First(), UriKind.RelativeOrAbsolute));
                 }
             }
-            if (sliderValue>videoTotalTime)
+            if (sliderValue > videoTotalTime)
             {
+
+                //MessageBox.Show(sliderValue.ToString());
                 //MessageBox.Show("关闭视频！");
-                myVideo.Pause();
+                myVideo.Stop();
+                myVideo.Visibility = System.Windows.Visibility.Hidden;
             }
-            else if (sliderValue<videoTotalTime)
+            else if (sliderValue < videoTotalTime)
             {
-                //myVideo.Position = TimeSpan.FromSeconds(sliderValue);
-                MessageBox.Show("播放视频！");
-                //myVideo.Play();
-               
+                //MessageBox.Show(sliderValue.ToString());
+                myVideo.Visibility = System.Windows.Visibility.Visible;
+                myVideo.Position = TimeSpan.FromSeconds(sliderValue);
+                //MessageBox.Show("播放视频！");
+                myVideo.Play();
+
             }
         }
 
@@ -622,7 +627,7 @@ namespace _10视频转换
         /// <param name="e"></param>
         private void myVideo_MediaEnded(object sender, RoutedEventArgs e)
         {
-            myVideo.Visibility = System.Windows.Visibility.Hidden;
+            //myVideo.Visibility = System.Windows.Visibility.Hidden;
             //MessageBox.Show("123");
             //myVideo.Close();
         }
@@ -671,7 +676,10 @@ namespace _10视频转换
 
 
 
-        
+
+
+
+
 
 
 
