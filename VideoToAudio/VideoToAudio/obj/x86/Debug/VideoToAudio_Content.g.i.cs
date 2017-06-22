@@ -8,9 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bin/debug/lovestory.mp3")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bin/debug/videotoaudio.exe")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bin/debug/videotoaudio.pdb")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bin/debug/videotoaudio.vshost.exe")]
 
 

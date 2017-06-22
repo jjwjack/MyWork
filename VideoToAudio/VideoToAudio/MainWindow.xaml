@@ -1,16 +1,16 @@
 ﻿<Window x:Class="_10视频转换.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
-    <Grid Height="285" Name="grid1" Width="503">
+        Title="MainWindow" Height="412" Width="533" Loaded="Window_Loaded">
+    <Grid Height="362" Name="grid1" Width="515">
         <!--<Image Height="86" HorizontalAlignment="Left" Margin="68,168,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="377" Source="bin\debug\1.jpg"/>-->
         <Image Height="86" HorizontalAlignment="Left" Margin="12,31,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="474" />
-        <MediaElement Height="48" HorizontalAlignment="Left" Margin="40,123,0,0" Name="myMusic" VerticalAlignment="Top" Width="271" MediaOpened="myMusic_MediaOpened" UnloadedBehavior="Manual" DataContext="{Binding}" LoadedBehavior="Manual" Source="E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\bin\Debug\LoveStory.mp3" />
-        <Button Content="暂停" Height="31" HorizontalAlignment="Left" Margin="40,231,0,0" Name="btnPlayOrPause" VerticalAlignment="Top" Width="49" Click="btnPlayOrPause_Click" />
-        <Slider Height="24" Margin="30,188,97,0" Name="slider1" VerticalAlignment="Top" ValueChanged="slider1_ValueChanged" PreviewMouseLeftButtonDown="slider1_PreviewMouseLeftButtonDown" />
-        <Label Height="24" HorizontalAlignment="Left" Margin="421,188,0,0" Name="lbTime" VerticalAlignment="Top" Width="65" Content="00:00" />
-        <Slider Height="23" HorizontalAlignment="Left" Margin="340,238,0,0" Name="slider2" VerticalAlignment="Top" Width="100" ValueChanged="slider2_ValueChanged" Value="5" Maximum="20" />
-        <MediaElement Height="168" HorizontalAlignment="Left" Margin="70,12,0,0" Name="myVideo" VerticalAlignment="Top" Width="336" MediaOpened="myVideo_MediaOpened" Source="E:\AppServ\www\github\MyWork\trunk\VideoToAudio\VideoToAudio\bin\Debug\LoveStory.mp4" UnloadedBehavior="Manual" MediaEnded="myVideo_MediaEnded" LoadedBehavior="Manual">
+        <MediaElement Height="48" HorizontalAlignment="Left" Margin="40,123,0,0" Name="myMusic" VerticalAlignment="Top" Width="271" MediaOpened="myMusic_MediaOpened" UnloadedBehavior="Manual" DataContext="{Binding}" LoadedBehavior="Manual" />
+        <Button Content="暂停" Height="31" HorizontalAlignment="Left" Margin="36,319,0,0" Name="btnPlayOrPause" VerticalAlignment="Top" Width="49" Click="btnPlayOrPause_Click" />
+        <Slider Height="24" Margin="26,276,101,0" Name="slider1" VerticalAlignment="Top" ValueChanged="slider1_ValueChanged" PreviewMouseLeftButtonDown="slider1_PreviewMouseLeftButtonDown" PreviewMouseLeftButtonUp="slider1_PreviewMouseLeftButtonUp" />
+        <Label Height="24" HorizontalAlignment="Left" Margin="417,276,0,0" Name="lbTime" VerticalAlignment="Top" Width="65" Content="00:00" />
+        <Slider Height="23" HorizontalAlignment="Left" Margin="336,326,0,0" Name="slider2" VerticalAlignment="Top" Width="100" ValueChanged="slider2_ValueChanged" Value="5" Maximum="20" />
+        <MediaElement Height="263" HorizontalAlignment="Left" Name="myVideo" VerticalAlignment="Top" Width="516" MediaOpened="myVideo_MediaOpened" UnloadedBehavior="Manual" MediaEnded="myVideo_MediaEnded" LoadedBehavior="Manual">
             <!--<MediaElement.Triggers>
                 <EventTrigger RoutedEvent="MediaElement.MediaEnded">
                     <BeginStoryboard>
@@ -22,7 +22,6 @@
                 </EventTrigger>
             </MediaElement.Triggers>-->
         </MediaElement>
-        <Button Content="停止" Height="31" HorizontalAlignment="Left" Margin="130,231,0,0" Name="btnStop" VerticalAlignment="Top" Width="53" Click="btnStop_Click" />
-        <Button Height="31" HorizontalAlignment="Left" Margin="226,236,0,0" Name="button1" VerticalAlignment="Top" Width="76" Content="视频暂停" Click="button1_Click" />
+        <Button Content="停止" Height="31" HorizontalAlignment="Left" Margin="126,319,0,0" Name="btnStop" VerticalAlignment="Top" Width="53" Click="btnStop_Click" />
     </Grid>
 </Window>

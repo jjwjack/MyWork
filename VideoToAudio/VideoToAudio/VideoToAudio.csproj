@@ -96,7 +96,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="bin\Debug\VideoToAudio.vshost.exe.manifest" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -105,29 +104,7 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="bin\Debug\001580.jpg" />
-    <Resource Include="bin\Debug\001974.jpg" />
-    <Resource Include="bin\Debug\002326.jpg" />
-    <Resource Include="bin\Debug\002695.jpg" />
-    <Resource Include="bin\Debug\003214.jpg" />
-    <Resource Include="bin\Debug\003587.jpg" />
-    <Resource Include="bin\Debug\003929.jpg" />
-    <Resource Include="bin\Debug\004338.jpg" />
-    <Resource Include="bin\Debug\004807.jpg" />
-    <Resource Include="bin\Debug\005172.jpg" />
-    <Resource Include="bin\Debug\005538.jpg" />
-    <Resource Include="bin\Debug\005828.jpg" />
-    <Resource Include="bin\Debug\010274.jpg" />
-    <Resource Include="bin\Debug\010425.jpg" />
-    <Resource Include="bin\Debug\010838.jpg" />
-    <Resource Include="bin\Debug\011237.jpg" />
-    <Resource Include="bin\Debug\011641.jpg" />
-    <Resource Include="bin\Debug\1.jpg" />
-    <Content Include="bin\Debug\LoveStory.mp3" />
-    <Content Include="bin\Debug\VideoToAudio.exe" />
-    <Content Include="bin\Debug\VideoToAudio.pdb" />
-    <Content Include="bin\Debug\VideoToAudio.vshost.exe" />
-    <Resource Include="bin\Debug\新建文本文档.txt" />
+    <Folder Include="bin\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
